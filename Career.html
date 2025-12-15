@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Career Page</title>
+</head>
+<body>
+  <h2>Career Suggestions</h2>
+  <p>Enter your interest to know a career option.</p>
+
+  <input type="text" id="interest" placeholder="coding or design">
+  <button onclick="suggestCareer()">Submit</button>
+
+  <p id="result"></p>
+
+  <script>
+    function suggestCareer() {
+      var interest = document.getElementById("interest").value.toLowerCase();
+      var result = document.getElementById("result");
+
+      if (interest === "coding") {
+        result.innerText = "Suggested Career: Web Developer";
+      } else if (interest === "design") {
+        result.innerText = "Suggested Career: UI/UX Designer";
+      } else {
+        result.innerText = "Please enter coding or design";
+      }
+    }
+  </script>
+</body>
+</html>
